@@ -1,4 +1,4 @@
-# ReinforcementLearningForBusiness
+# Reinforcement Learning For Business
 
 This repo is to provide a framework for businesses to apply reinforcement learning based solutions
 
