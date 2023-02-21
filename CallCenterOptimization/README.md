@@ -8,3 +8,12 @@ Imagine that you are the manager of a call center and you are responsible for as
 
 ## Solution with Reinforcement Learning: 
 You can use RL to build an agent that learns how to assign calls to CSRs over time. The agent will take as input the characteristics of each incoming call (e.g., the topic of the call, the urgency of the request, the language required) and the experience level of each available CSR. It will output the index of the best CSR to assign the call to, based on the expected reward (e.g., customer satisfaction rating) of each possible action.
+
+## Execution:
+This code defines the CallCenter environment and QLearningAgent classes. The CallCenter class defines the environment that the agent operates in, including the experience levels of each CSR, the rewards table, and the action space. The `QLearning Agent` class defines the Q-learning agent, which has a Q-table that maps state-action pairs to expected future rewards. The agent selects actions using an epsilon-greedy policy and updates the Q-table using the Q-learning algorithm.
+
+The code trains the Q-learning agent for a certain number of episodes by iterating over each episode, selecting actions and updating the Q-table until the episode is complete. The exploration rate is decayed over time to encourage the agent to exploit its knowledge more as it becomes more experienced.
+
+Finally, the code tests the trained agent by running an episode in which it selects actions greedily based on the learned Q-values. In this case, the agent is presented with a call of a certain experience level, and it must choose which CSR to assign the call to in order to maximize the reward.
+
+Note that this code is a simple example, and there are many ways to improve it. For example, you could experiment with different reward structures or explore other algorithms, such as SARSA or deep Q-learning.
